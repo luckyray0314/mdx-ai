@@ -10,7 +10,7 @@ const theme = createTheme({
           /* Your custom body styles here */
           // fontFamily: "Roboto, sans-serif",
           // fontSize: "16px",
-          background: "linear-gradient(45deg, #101921 30%, #3F3B53 90%)",
+          background: "linear-gradient(45deg, #101921 30%, #1C3F2F 90%)",
           // Add other styles as needed
         },
       },

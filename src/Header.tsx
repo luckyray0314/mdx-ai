@@ -13,24 +13,24 @@ export default function Header() {
           left: 0,
           borderBottom: 2,
           borderRight: 2,
-          borderColor: "#C9A4F8",
-          background: "#6C5E8D",
+          borderColor: "#66BB6A",
+          background: "#2F684D",
           justifyContent: "flex-start",
           borderRadius: "0 0 80px 0",
-          boxShadow: "0px 0px 16px 0px #C9A4F8",
+          boxShadow: "0px 0px 16px 0px #51CC76",
           height: "10vh",
           width: "35vw",
         }}
       >
-        <img src="1.png" width={"80px"} height={"80px"}></img>
+        <img src="5.png" width={"80px"} height={"80px"}></img>
         <Typography
           component="h2"
           variant="h4"
           align="center"
           noWrap
-          sx={{ flex: 1, color: "#C9A4F8", fontWeight: "bold" }}
+          sx={{ flex: 1, color: "#66BB6A", fontWeight: "bold" }}
         >
-          Proprietary AI
+          MDX AI Assitant
         </Typography>
       </Toolbar>
     </>

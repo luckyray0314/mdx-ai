@@ -83,7 +83,7 @@ export default function Blog() {
       setMessages([{ id: 0, text: prompt, sender: "user" }]);
     }
 
-    await fetch("https://0f86-2a00-1169-11b-f40-00.ngrok-free.app/api/proprietary-assistant", {
+    await fetch("http://localhost:5050/api/proprietary-assistant", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -137,9 +137,9 @@ export default function Blog() {
           ) : (
             <DesktopWindowsIcon />
           )}
-          <Typography sx={{ wordWrap: "break-word", width: "95%" }}>
+          <Box sx={{ wordWrap: "break-word", width: "95%" }}>
             {message.text}
-          </Typography>
+          </Box>
         </Stack>
         {/* <Divider
           sx={{
@@ -175,15 +175,15 @@ export default function Blog() {
             sx={{
               width: "30%",
               border: 2,
-              borderColor: "#C9A4F8",
+              borderColor: "#66BB6A",
               borderRadius: "40px",
-              boxShadow: "0px 0px 16px 0px #C9A4F8",
+              boxShadow: "0px 0px 16px 0px #66BB6A",
               padding: 5,
             }}
           >
             <Stack direction={"row"} spacing={2} sx={{ mb: 2 }}>
               <Button
-                color="secondary"
+                color="success"
                 startIcon={<AddIcon />}
                 sx={{ width: "100%", height: "2.8rem" }}
                 variant="contained"
@@ -191,7 +191,7 @@ export default function Blog() {
                 New Chat
               </Button>
               <Button
-                color="secondary"
+                color="success"
                 startIcon={<DeleteIcon />}
                 sx={{ width: "100%", height: "2.8rem" }}
                 variant="outlined"
@@ -199,7 +199,7 @@ export default function Blog() {
                 Delete All
               </Button>
             </Stack>
-            <Divider sx={{ border: "1px solid #C9A4F8" }} />
+            <Divider sx={{ border: "1px solid #66BB6A" }} />
             <List
               sx={{
                 maxHeight: "65vh",
@@ -218,18 +218,18 @@ export default function Blog() {
                     border: 2,
                     mt: 2,
                     borderRadius: "25px",
-                    borderColor: "#C9A4F8",
-                    color: "#C9A4F8",
+                    borderColor: "#66BB6A",
+                    color: "#66BB6A",
                     fontSize: "2rem",
                     fontWeight: "bold",
                     "&:hover, &:focus": { "& svg": { opacity: 1 } },
                   }}
                 >
                   <ListItemText primary="New Chat" />
-                  <IconButton sx={{ color: "#C9A4F8" }}>
+                  <IconButton sx={{ color: "#66BB6A" }}>
                     <EditIcon />
                   </IconButton>
-                  <IconButton sx={{ color: "#C9A4F8" }}>
+                  <IconButton sx={{ color: "#66BB6A" }}>
                     <DeleteIcon />
                   </IconButton>
                 </ListItemButton>
@@ -240,7 +240,7 @@ export default function Blog() {
             sx={{
               width: "70%",
               // border: 2,
-              borderColor: "#C9A4F8",
+              borderColor: "#66BB6A",
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
@@ -264,7 +264,7 @@ export default function Blog() {
                   borderRadius: "6px",
                 },
                 "&::-webkit-scrollbar-thumb": {
-                  backgroundColor: "#C9A4F8",
+                  backgroundColor: "#66BB6A",
                   borderRadius: "6px",
                 },
                 "&::-webkit-scrollbar-thumb:hover": {
@@ -278,7 +278,7 @@ export default function Blog() {
                     variant="h4"
                     align="center"
                     sx={{
-                      color: "#736796",
+                      color: "#2F684D",
                       fontSize: "4rem",
                       fontWeight: "bold",
                     }}
@@ -289,36 +289,25 @@ export default function Blog() {
                     variant="h4"
                     align="center"
                     sx={{
-                      color: "#736796",
+                      color: "#2F684D",
                       fontSize: "4rem",
                       fontWeight: "bold",
                     }}
                   >
-                    Proprietary AI ChatGPT!
+                    MDX AI Assitant!
                   </Typography>
                   <Typography
                     variant="h4"
                     align="center"
                     sx={{
-                      color: "#736796",
+                      color: "#2F684D",
                       // fontSize: "6rem",
                       fontWeight: "bold",
                     }}
                   >
-                    Proprietary AI can assist you with various proprietary
-                    information.
-                  </Typography>
-                  <Typography
-                    variant="h4"
-                    align="center"
-                    sx={{
-                      color: "#736796",
-                      // fontSize: "6rem",
-                      fontWeight: "bold",
-                    }}
-                  >
-                    You can start a conversation here. Please input your
-                    question.
+                    MDX AI Assistant an GPT model developed by R Group to
+                    support medical device interopablity and configruation
+                    support.
                   </Typography>
                 </>
               )}
@@ -330,7 +319,7 @@ export default function Blog() {
                       my: 2,
                       width: "80%",
                       mx: "auto",
-                      borderColor: "#6C5E8D",
+                      borderColor: "#2F684D",
                     }}
                   />
                 </>
@@ -343,7 +332,7 @@ export default function Blog() {
                 sx={{ display: "flex", alignItems: "center" }}
               >
                 {/* <Grid item xs={1}>
-                  <IconButton size="large" color="secondary">
+                  <IconButton size="large" color="success">
                     <AttachFileIcon fontSize="inherit" />
                   </IconButton>
                 </Grid> */}
@@ -363,7 +352,7 @@ export default function Blog() {
                         <InputAdornment position="start">
                           <IconButton
                             size="small"
-                            color="secondary"
+                            color="success"
                             title="Attach files"
                           >
                             <AttachFileIcon />
@@ -372,18 +361,18 @@ export default function Blog() {
                       ),
                       sx: {
                         "& svg": {
-                          fill: "#C9A4F8",
+                          fill: "#66BB6A",
                         },
                         "& fieldset": {
-                          border: "2px solid #C9A4F8!important",
+                          border: "2px solid #66BB6A!important",
                           borderRadius: 2,
                         },
                         "&:hover fieldset": {
-                          // border: "2px solid #C9A4F8!important",
+                          // border: "2px solid #66BB6A!important",
                           // borderRadius: 0,
                         },
                         "&:focus-within fieldset, &:focus-visible fieldset": {
-                          boxShadow: "0px 0px 16px 0px #C9A4F8",
+                          boxShadow: "0px 0px 16px 0px #66BB6A",
                         },
                       },
                     }}
@@ -396,14 +385,14 @@ export default function Blog() {
                 <Grid item xs={2}>
                   <Button
                     variant="contained"
-                    color="secondary"
+                    color="success"
                     title="Send"
                     sx={{
                       borderRadius: "50%",
                       width: "45px",
                       height: "64px",
                       "&.Mui-disabled": {
-                        backgroundColor: "#6C5E8D", // Custom background color when button is disabled
+                        backgroundColor: "#2F684D", // Custom background color when button is disabled
                         color: "white", // Custom text color when button is disabled
                       },
                     }}
