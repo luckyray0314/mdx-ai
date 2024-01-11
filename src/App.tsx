@@ -22,7 +22,7 @@ import DesktopWindowsIcon from "@mui/icons-material/DesktopWindows";
 // import ListItem from "@mui/material/ListItem";
 import Divider from "@mui/material/Divider";
 // import ListItemText from "@mui/material/ListItemText";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import ReactMarkdown from "react-markdown";
 
@@ -42,6 +42,25 @@ export default function Blog() {
   // const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
+  const newTextRef = useRef<HTMLDivElement>(null);
+  const [autoScroll, setAutoScroll] = useState(true);
+
+  function scrollDomToBottom() {
+    const dom = newTextRef.current;
+    if (dom) {
+      requestAnimationFrame(() => {
+        setAutoScroll(true);
+        dom.scrollTo(0, dom.scrollHeight);
+      });
+    }
+  }
+
+  useEffect(() => {
+    if (autoScroll) {
+      scrollDomToBottom();
+    }
+  });
 
   // console.log('prompt----------', prompt);
   // const handleListItemClick = (
@@ -106,6 +125,7 @@ export default function Blog() {
         // console.error(error);
         setErrorMessage("Network Error! Please try again.");
       });
+    scrollDomToBottom();
     setLoading(false);
   };
 
@@ -275,6 +295,8 @@ export default function Blog() {
                   backgroundColor: "#6C5E8D",
                 },
               }}
+              ref={newTextRef}
+              id="newTextElement"
             >
               {messages == null && (
                 <>
