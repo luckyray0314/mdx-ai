@@ -24,6 +24,8 @@ import Divider from "@mui/material/Divider";
 // import ListItemText from "@mui/material/ListItemText";
 import React, { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
+import ReactMarkdown from "react-markdown";
+
 // import Sidebar from "./Sidebar";
 
 interface Message {
@@ -67,13 +69,13 @@ export default function Blog() {
     // setErrorMessage("");
 
     if (prompt.trim() == "") {
-      console.log("prompt is empty");
+      // console.log("prompt is empty");
       // setErrorMessage("Prompt cannot be empty!");
       // setLoading(false);
       return;
     }
 
-    console.log("-----prompt-------", prompt);
+    // console.log("-----prompt-------", prompt);
     let num = 0;
     if (messages != null) {
       num = messages?.length;
@@ -91,17 +93,17 @@ export default function Blog() {
       body: JSON.stringify({ prompt: prompt }),
     })
       .then((response) => {
-        console.log("response--------", response);
+        // console.log("response--------", response);
         return response.json();
       })
       .then((data) => {
-        console.log("Result", data.result);
+        // console.log("Result", data.result);
 
         setResponse(data.result);
         // setOpen(true);
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
+        // console.error(error);
         setErrorMessage("Network Error! Please try again.");
       });
     setLoading(false);
@@ -127,18 +129,20 @@ export default function Blog() {
     }
   }, [errorMessage]);
 
-  console.log("Message-------", messages);
+  // console.log("Message-------", messages);
   const Message = ({ message }: { message: Message }) => {
     return (
       <>
         <Stack direction={"row"} spacing={2} color={"white"}>
-          {message.sender == "user" ? (
-            <AccountBoxIcon />
-          ) : (
-            <DesktopWindowsIcon />
-          )}
+          <Box>
+            {message.sender == "user" ? (
+              <AccountBoxIcon sx={{ mt: "16px" }} />
+            ) : (
+              <DesktopWindowsIcon sx={{ mt: "16px" }} />
+            )}
+          </Box>
           <Box sx={{ wordWrap: "break-word", width: "95%" }}>
-            {message.text}
+            <ReactMarkdown>{message.text}</ReactMarkdown>
           </Box>
         </Stack>
         {/* <Divider
