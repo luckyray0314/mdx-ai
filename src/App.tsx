@@ -104,13 +104,16 @@ export default function Blog() {
       setMessages([{ id: 0, text: prompt, sender: "user" }]);
     }
 
-    await fetch("http://212.192.31.92:5098/api/proprietary-assistant", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ prompt: prompt }),
-    })
+    await fetch(
+      "https://0f86-2a00-1169-11b-f40-00.ngrok-free.app/api/proprietary-assistant",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt: prompt }),
+      }
+    )
       .then((response) => {
         // console.log("response--------", response);
         return response.json();
