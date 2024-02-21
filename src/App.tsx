@@ -312,7 +312,7 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    Welcome to
+                    MDX AI Assistant
                   </Typography>
                   <Typography
                     variant="h4"
@@ -323,7 +323,7 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    MDX AI Assitant!
+                    Developed by R Group
                   </Typography>
                   <Typography
                     variant="h4"
@@ -334,9 +334,9 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    MDX AI Assistant an GPT model developed by R Group to
-                    support medical device interopablity and configruation
-                    support.
+                    MDX AI Assistant is a GPT model to support medical device
+                    interoperability and configuration support of various
+                    medical devices to streamline EMR Connectivity.
                   </Typography>
                 </>
               )}
