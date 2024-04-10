@@ -105,7 +105,7 @@ export default function Blog() {
     }
 
     await fetch(
-      "https://0f86-2a00-1169-11b-f40-00.ngrok-free.app/api/proprietary-assistant",
+      "https://acd7-54-169-94-71.ngrok-free.app/api/proprietary-assistant",
       {
         method: "POST",
         headers: {
@@ -312,7 +312,7 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    MDX AI Assistant
+                    Welcome to
                   </Typography>
                   <Typography
                     variant="h4"
@@ -323,7 +323,7 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    Developed by R Group
+                    MDX AI Assistant!
                   </Typography>
                   <Typography
                     variant="h4"
@@ -334,9 +334,9 @@ export default function Blog() {
                       fontWeight: "bold",
                     }}
                   >
-                    MDX AI Assistant is a GPT model to support medical device
-                    interoperability and configuration support of various
-                    medical devices to streamline EMR Connectivity.
+                    MDX AI Assistant an GPT model developed by R Group to
+                    support medical device interoperability and configuration
+                    support.
                   </Typography>
                 </>
               )}
