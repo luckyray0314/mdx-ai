@@ -105,7 +105,7 @@ export default function Blog() {
     }
 
     await fetch(
-      "https://acd7-54-169-94-71.ngrok-free.app/api/proprietary-assistant",
+      "https://41b7-35-78-107-144.ngrok-free.app/api/proprietary-assistant",
       {
         method: "POST",
         headers: {
